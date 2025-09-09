@@ -1,0 +1,41 @@
+# Movie Review API
+
+
+For my capstone project, I am building a Movie Review API using Django and the Django REST Framework. The goal of this project is to provide a backend service where users can write and manage movie reviews in a secure and organized way.
+
+The API will support full CRUD functionality for reviews, while implementing JWT authentication so that only the review’s owner can edit or delete their content. To ensure scalability, the API will also include features like search, filtering, and pagination. Once completed, it will be deployed on PythonAnywhere for live testing and demonstration.
+
+## Key Features
+- Create, view, update, and delete movie reviews.
+- User authentication with JWT to secure endpoints.
+- Ability to list reviews by movie.
+- Support for search, filtering, and pagination of reviews.
+- Online deployment for public access and testing.
+
+## Planned Endpoints
+### Authentication
+- **POST** `/api/token/` - Obtain access and refresh tokens.
+- **POST** `/api/token/refresh/` - Renew an access token.
+
+### Reviews
+- **GET** `/api/reviews/` - Retrieve all reviews.
+- **POST** `/api/reviews/` - Add a new review (authenticated users only).
+- **GET** `/api/reviews/{id}/` - View a single review.
+- **PUT** `/api/reviews/{id}/` - Edit a review (review owner only).
+- **DELETE** `/api/reviews/{id}/` - Remove a review (review owner only).
+
+### API Documentation
+- **Swagger UI**: `/swagger/`
+- **ReDoc UI**: `/redoc/`
+
+## Setup and Installation
+### Prerequisites
+- Python 3.x
+- Virtual environment (recommended)
+- Git (optional for version control)
+
+### Installation Steps
+1. Clone the repository:
+   ```bash
+   git clone <your-repository-url>
+   cd movie-review-api
